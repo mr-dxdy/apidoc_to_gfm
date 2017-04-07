@@ -1,0 +1,34 @@
+# {{ resource_name }}
+
+## {{ description }}
+
+{{# explanation }}
+
+{{ explanation }}
+{{/ explanation }}
+
+```
+{{ http_method }} {{ route }}
+```
+
+{{# has_parameters? }}
+
+| Attribute | Type | Required | Description |
+| --------- | ---- | -------- | ----------- |
+{{# parameters }}
+| {{ name }} | {{ Type }} | {{ required }} | {{ description }} |
+{{/ parameters }}
+
+{{/ has_parameters? }}
+
+{{# requests }}
+{{# response_status }}
+{{# response_body }}
+
+Example response:
+
+<pre>{{ response_body }}</pre>
+
+{{/ response_body }}
+{{/ response_status }}
+{{/ requests }}
