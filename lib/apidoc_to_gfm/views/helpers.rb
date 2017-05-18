@@ -2,7 +2,7 @@ module ApidocToGFM
   module Views
     module Helpers
       def template_exists?
-        path = File.join(self.template_path, self.template_name)
+        path = File.join(self.template_path, "#{self.template_name}.mustache")
         File.exists? path
       end
 
